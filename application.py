@@ -9,3 +9,7 @@ def index():
 @app.route('/nat')
 def nat():
     return 'Hello, nat!'
+
+@app.route('/<string:name>')
+def hello(name):
+    return f'Hello, {name}!'
