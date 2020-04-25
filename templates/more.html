@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <title>My Website!</title>
@@ -8,4 +8,15 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam saepe ipsa magnam sapiente exercitationem tempora quidem optio molestias nesciunt repudiandae. Eum quod harum ullam, laborum aut voluptatum similique quae doloribus?</p>
         <a href="{{ url_for('index') }}">Go back</a>
     </body>
-</html>
+</html> -->
+
+{% extends 'layout.html' %}
+
+{% block heading %}
+Second Page
+{% endblock %}
+
+{% block body %}
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, reprehenderit. Dolor molestiae odio, mollitia quis fuga, incidunt aliquid nisi, modi doloribus repellendus ducimus temporibus eum? Et numquam provident rerum nam?</p>
+<a href="{{ url_for('index') }}">Go back...</a>
+{% endblock %}

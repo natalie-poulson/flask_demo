@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
     <head>
         <title>My Website!</title>
@@ -8,7 +8,7 @@
              }
         </style>
     </head>
-    <body>
+    <body> -->
         <!-- Variables -->
         <!-- <h1>{{ headline }}</h1> -->
 
@@ -28,8 +28,24 @@
         </ul> -->
 
         <!-- URLs and Links -->
-        <h1>First Page</h1>
+        <!-- <h1>First Page</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis labore soluta quia fugit necessitatibus vel totam eius neque, minima sequi mollitia nostrum, ab fuga omnis ipsam debitis saepe qui minus.</p>
         <a href='{{ url_for("more") }}'>See more...</a>
     </body>
-</html>
+</html> -->
+
+{% extends 'layout.html' %}
+
+{% block heading %}
+First Page
+{% endblock %}
+
+{% block body %}
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, reprehenderit. Dolor molestiae odio, mollitia quis fuga, incidunt aliquid nisi, modi doloribus repellendus ducimus temporibus eum? Et numquam provident rerum nam?</p>
+<a href="{{ url_for('more') }}">See more...</a>
+
+<form action="{{ url_for('hello') }}" method="post">
+    <input type="text" name="name" placeholder="Enter Your Name">
+    <button>Submit</button>
+</form>
+{% endblock %}
