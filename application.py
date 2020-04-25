@@ -1,3 +1,5 @@
+import datetime
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -16,13 +18,21 @@ app = Flask(__name__)
 #     name = name.capitalize()
 #     return f'<h1>Hello, {name}!<h2>'
 
-# Working with HTML files
+# Templates & Variables
+# @app.route('/')
+# def index():
+#     headline = 'Hello!'
+#     return render_template('index.html', headline=headline)
+
+# @app.route('/bye')
+# def bye():
+#     headline = 'See ya'
+#     return render_template('index.html', headline=headline)
+
+
+# Conditions
 @app.route('/')
 def index():
-    headline = 'Hello!'
-    return render_template('index.html', headline=headline)
-
-@app.route('/bye')
-def bye():
-    headline = 'See ya'
-    return render_template('index.html', headline=headline)
+    now = datetime.datetime.now()
+    anniversary = now.month == 2 and now.day == 20
+    return render_template('index.html', anniversary=anniversary)

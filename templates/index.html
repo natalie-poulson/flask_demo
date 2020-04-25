@@ -2,8 +2,19 @@
 <html>
     <head>
         <title>My Website!</title>
+        <style>
+             body{
+                 text-align:center;
+             }
+        </style>
     </head>
     <body>
-        <h1>{{ headline }}</h1>
+        <!-- <h1>{{ headline }}</h1> -->
+
+        {% if anniversary %}
+            <h1>Yes</h1>
+            {% else %}
+            <h1>No</h1>
+            {% endif %}
     </body>
 </html>
