@@ -1,4 +1,4 @@
-import datetime
+# import datetime
 
 from flask import Flask, render_template
 
@@ -31,8 +31,14 @@ app = Flask(__name__)
 
 
 # Conditions
+# @app.route('/')
+# def index():
+#     now = datetime.datetime.now()
+#     anniversary = now.month == 2 and now.day == 20
+#     return render_template('index.html', anniversary=anniversary)
+
+# Loops
 @app.route('/')
 def index():
-    now = datetime.datetime.now()
-    anniversary = now.month == 2 and now.day == 20
-    return render_template('index.html', anniversary=anniversary)
+    names = ['Alice', 'Bob', 'Charlie']
+    return render_template('index.html', names=names)

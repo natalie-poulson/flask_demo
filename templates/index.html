@@ -9,12 +9,22 @@
         </style>
     </head>
     <body>
+        <!-- Variables -->
         <!-- <h1>{{ headline }}</h1> -->
 
-        {% if anniversary %}
+        <!-- Conditions -->
+        <!-- {% if anniversary %}
             <h1>Yes</h1>
             {% else %}
             <h1>No</h1>
-            {% endif %}
+            {% endif %} -->
+
+        <!-- Loops -->
+        <h1>Names</h1>
+        <ul>
+            {% for name in names %}
+                <li>{{ name }}</li>
+            {% endfor %}
+        </ul>
     </body>
 </html>
